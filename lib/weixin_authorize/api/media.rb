@@ -96,6 +96,14 @@ module WeixinAuthorize
         http_post(get_material_url, { media_id: media_id })
       end
 
+
+     # 永久素材的总数，也会计算公众平台官网素材管理中的素
+      def get_materialcount()
+        get_materialcount_url = "/material/get_materialcount"
+        http_get(get_materialcount_url)
+      end
+
+
       private
 
       def media_base_url

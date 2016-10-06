@@ -84,6 +84,12 @@ describe WeixinAuthorize::Api::Media do
     expect(result.result["total_count"]).to eq 3
   end
 
+
+  it "获取永久素材总数" do
+    result = $client.get_materialcount()
+    expect(result.result["news_count"]).to eq 3
+  end
+
   it "获取永久素材" do
     result = $client.get_material("JjGnDDP6U0drfWQNViblSD4QszI2-XDbw4TKlwnBi7I")
     expect(result.result["news_item"][0]["title"]).to eq "架子肉39元一公斤！！震撼米东的好味道！开店33年老店绝密手艺等您来尝！"
