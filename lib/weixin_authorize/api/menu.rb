@@ -22,7 +22,7 @@ module WeixinAuthorize
       def addconditional_menu(menu)
         menu = JSON.load(menu) if menu.is_a?(String)
         addconditional_menu_url = "#{menu_base_url}/addconditional"
-        http_post(delete_menu_url, menu)
+        http_post(addconditional_menu_url, menu)
       end
 
       # 自定义菜单创建接口
