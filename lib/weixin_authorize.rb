@@ -77,6 +77,7 @@ module WeixinAuthorize
     end
 
     def file_endpoint
+      raise "123asd"
       "https://api.weixin.qq.com/cgi-bin"
     end
 
